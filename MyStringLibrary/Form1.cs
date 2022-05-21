@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StringMetody;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace MyStringLibrary
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string vstupniRetezec = textBox1.Text;
+            MessageBox.Show(Metody.VymazDiakritiku(vstupniRetezec).ToString());
         }
 
         private void button3_Click(object sender, EventArgs e)

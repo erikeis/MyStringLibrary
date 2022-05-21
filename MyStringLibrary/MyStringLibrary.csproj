@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StringMetody\StringMetody.csproj">
+      <Project>{0295BA64-BF7A-41F5-ADAB-046FDD1694C9}</Project>
+      <Name>StringMetody</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
