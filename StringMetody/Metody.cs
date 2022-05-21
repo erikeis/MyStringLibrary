@@ -32,6 +32,38 @@ namespace StringMetody
         }
         */
 
+        public static string PasswordGen()
+        {
+            Random random = new Random();
+            string password = string.Empty;
+            int number = 0;
+            for (int i = 0; i < 6; i++) //sestimistne heslo
+            {
+                number = random.Next(1, 4);
+                switch (number)
+                {
+                    case 1: //velka pismena
+                        {
+                            password += (char)random.Next((int)'A', (int)'Z'+1);
+                            break;
+                        }
+                    case 2: //mala pismena
+                        {
+                            password += (char)random.Next((int)'a', (int)'z'+1);
+                            break;
+                        }
+                    case 3: //cisla
+                        {
+                            password += random.Next(0, 10).ToString();
+                            break;
+                        }
+                    default: //nikdy neprobehne
+                        break;
+                }
+                
+            }
+            return password;
+        }
 
     }
 }

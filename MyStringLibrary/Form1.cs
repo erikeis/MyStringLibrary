@@ -31,7 +31,7 @@ namespace MyStringLibrary
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = Metody.PasswordGen();
         }
     }
 }
