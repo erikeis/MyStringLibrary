@@ -65,5 +65,22 @@ namespace StringMetody
             return password;
         }
 
+        public static int PocetZnaku(string vstup, out int pocetVelkych, out int pocetCisel, out int pocetJinych)
+        {
+            pocetCisel = 0;
+            pocetJinych = 0;
+            pocetVelkych = 0;
+            int pocetMalych = 0;
+
+            for (int i = 0; i < vstup.Length; i++)
+            {
+                if (char.IsDigit(vstup[i])) ++pocetCisel;
+                else if (char.IsUpper(vstup[i])) ++pocetVelkych;
+                else if (char.IsLower(vstup[i])) ++pocetMalych;
+                else if (vstup[i] != ' ') ++pocetJinych; //vsechny ostatni znaky krome mezery
+            }
+
+            return pocetMalych;
+        }
     }
 }
